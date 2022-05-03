@@ -9,7 +9,7 @@ import java.io.IOException;
 public class UserDelete extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String requestParameter =request.getParameter("user");
+        String requestParameter = request.getParameter("user");
         int userId = Integer.valueOf(requestParameter);
         UserDao userDao = new UserDao();
         User userToDelete = userDao.read(userId);
@@ -20,7 +20,7 @@ public class UserDelete extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String requestParameter =request.getParameter("id");
+        String requestParameter = request.getParameter("id");
         int userId = Integer.valueOf(requestParameter);
 
         UserDao userdao = new UserDao();
